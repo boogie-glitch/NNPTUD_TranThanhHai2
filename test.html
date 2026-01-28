@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Management</title>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Post & Comment Management</h1>
+        
+        <div class="management-wrapper">
+            <!-- Posts Section -->
+            <div class="management-section">
+                <div class="table-section">
+                    <h2 class="section-title">Posts</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>View</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-section">
+                    <h2>Add / Edit Post</h2>
+                    <div class="form-group">
+                        <input id="text-id" type="text" placeholder="ID (Auto-generated)">
+                        <input id="text-title" type="text" placeholder="Post Title">
+                        <input id="text-view" type="number" placeholder="View Count">
+                        <button class="btn-save" onclick="Save()">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="management-section">
+                <div class="table-section">
+                    <h2 class="section-title">Comments</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Text</th>
+                                <th>Post ID</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="comments-table-body">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-section">
+                    <h2>Add / Edit Comment</h2>
+                    <div class="form-group">
+                        <input id="comment-id" type="text" placeholder="ID (Auto-generated)">
+                        <input id="comment-text" type="text" placeholder="Comment Text">
+                        <input id="comment-postId" type="text" placeholder="Post ID">
+                        <button class="btn-save" onclick="SaveComment()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+</body>
+</html>
